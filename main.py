@@ -9,7 +9,7 @@ from pytube import YouTube
 ARG_PLAYLIST_ID_SHORT = "-ID"
 ARG_PLAYLIST_ID_LONG = "--playlist_id"
 ARG_PLAYLIST_ID_HELP = "provide your playlist id"
-MODULE_INFO = "this script downloads youtube playlists and converts these to mp3 files"
+MODULE_INFO = "This Script Downloads Youtube Playlists & Converts These To MP3 Files"
 YT_PLAYLIST_URL_FRAGMENT = "https://www.youtube.com/playlist?list="
 DOWNLOAD_PATH = "download"
 VIDEO_FILE_EXT = "mp4"
