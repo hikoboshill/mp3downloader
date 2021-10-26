@@ -28,5 +28,3 @@ After that, run below command from terminal adding the ID as argument.
 ```console
 (venv)your_pc$ python main.py -ID PLDfKAXSi6kUau7d9DcU2v9u7xwmSqlCyB
 ```
-
-
