@@ -42,7 +42,8 @@ def download_videos_from_playlist(playlist):
     # prints each video url, which is the same as iterating through playlist.video_urls
     for url in playlist:
         print(url)
-        YouTube(url).streams.filter(file_extension=VIDEO_FILE_EXT).first().download(DOWNLOAD_PATH)
+        YouTube(url).streams.filter(
+            file_extension=VIDEO_FILE_EXT).first().download(DOWNLOAD_PATH)
         convert_video_to_audio()
 
 
@@ -50,7 +51,8 @@ def convert_video_to_audio():
     for file in os.listdir(DOWNLOAD_PATH):
         if re.search(VIDEO_FILE_EXT, file):
             video_path = os.path.join(DOWNLOAD_PATH, file)
-            audio_path = os.path.join(DOWNLOAD_PATH, os.path.splitext(file)[0] + "." + AUDIO_FILE_EXT)
+            audio_path = os.path.join(DOWNLOAD_PATH, os.path.splitext(file)[
+                                      0] + "." + AUDIO_FILE_EXT)
             new_file = MP.AudioFileClip(video_path)
             new_file.write_audiofile(audio_path)
             os.remove(video_path)
